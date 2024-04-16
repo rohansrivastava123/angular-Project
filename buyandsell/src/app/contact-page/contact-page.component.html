@@ -1,1 +1,14 @@
-<p>contact-page works!</p>
+<div class="contentbox">
+  <div>
+    <label>your email address <input type="email" [(ngModel)]="email" /></label>
+  </div>
+  <div>
+    <label
+      >your message
+      <textarea name="msg" rows="5" cols="20" [(ngModel)]="message"></textarea>
+    </label>
+  </div>
+
+  <button (click)="sendMessage()">send</button>
+  <a routerLink="/listings/{{ listing.id }}"><button>back</button></a>
+</div>

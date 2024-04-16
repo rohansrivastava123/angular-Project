@@ -1,1 +1,9 @@
-<p>listing-detatil-page works!</p>
+<div>
+  <a routerLink="/listings"> <button>Back</button></a>
+  <h2>{{ listing.name }}</h2>
+  <p>{{ listing.description }}</p>
+  <h5>
+    just for <strong>${{ listing.price }}</strong>
+  </h5>
+  <a routerLink="/contact/{{ listing.id }}"><button>contact seller</button></a>
+</div>
