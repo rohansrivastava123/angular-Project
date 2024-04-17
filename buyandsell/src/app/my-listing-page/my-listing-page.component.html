@@ -1,1 +1,29 @@
-<p>my-listing-page works!</p>
+<div *ngIf="true; else loading">
+  <h1>here is your listing page</h1>
+  <div *ngFor="let listing of listings">
+    <h3>{{ listing.name }}</h3>
+    <div>
+      <a routerLink="/editlisting/{{ listing.id }}"><button>Edit</button></a>
+    </div>
+    <div>
+      <a routerLink="/listings/{{ listing.id }}"><button>Back</button></a>
+    </div>
+    <div>
+      <button (click)="deleteListingClick(listing.id)">Delete</button>
+    </div>
+  </div>
+</div>
+<br /><br />
+<div>
+  <a routerLink="/newlisting"
+    ><button><h3>create new listing</h3></button></a
+  >
+</div>
+
+<ng-template #loading>
+  <span><i>still loading.....</i></span>
+</ng-template>
+
+<!-- ngFor is used for iterating over the items in the array -->
+<!-- ngIf is used for the conditional rendering -->
+<!-- ng-template renders the item that is to be loaded if ngIf stated something falsy -->

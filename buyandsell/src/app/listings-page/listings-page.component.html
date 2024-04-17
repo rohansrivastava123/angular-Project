@@ -1,6 +1,10 @@
 <div>
-  <div class="contentbox" *ngFor="let listing of listings">
-    <a routerLink="/listings/{{ listing.id }}">
+  <div
+    routerLink="/listings/{{ listing.id }}"
+    class="contentbox"
+    *ngFor="let listing of listings"
+  >
+    <a>
       <h3>{{ listing.name }} - ${{ listing.price }}</h3>
     </a>
   </div>

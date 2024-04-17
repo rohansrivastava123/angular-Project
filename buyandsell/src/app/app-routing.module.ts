@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   { path: 'listings/:id', component: ListingDetatilPageComponent },
   { path: 'contact/:id', component: ContactPageComponent },
-  { path: 'edit-listing/:id', component: EditListingPageComponent },
+  { path: 'editlisting/:id', component: EditListingPageComponent },
   { path: 'mylistings', component: MyListingPageComponent },
   { path: 'newlisting', component: NewListingPageComponent },
 ];
